@@ -1,0 +1,33 @@
+/* General styles */
+body {
+    background-image: url('booknow\ img.png'); /* Adjust the path to your local image */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        margin: 10px;
+    }
+}
