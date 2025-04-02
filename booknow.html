@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Delux Ocean View</h5>
                         <h5>starting from <span>₹3499/night</span></h5>
-                        <button class="btn nav__btn" style="background-color: blue; color: white;" onclick="window.location.href='payment.html'">Book Now</button>
+                        <button class="btn nav__btn" style="background-color: blue; color: white;" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Delux Cityscape Room</h5>
                         <p class="card-text">₹3199/ night</p>
-                        <button class="btn nav__btn" style="background-color: blue; color: white;" onclick="window.location.href='payment.html'">Book Now</button>
+                        <button class="btn nav__btn" style="background-color: blue; color: white;" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
                     </div>
                 </div>
             </div>
@@ -38,15 +38,14 @@
                     <div class="card-body">
                         <h5 class="card-title">Family Garden Retreat</h5>
                         <p class="card-text">₹3299 / night</p>
-                        <button class="btn nav__btn" style="background-color: blue; color: white;" onclick="window.location.href='payment.html'">Book Now</button>
+                        <button class="btn nav__btn" style="background-color: blue; color: white;" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
 
-    <!-- Booking Modal -->
+</body>
     <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -56,9 +55,9 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" id="room_id">
-                    <label for="check_in">Check-in Date:</label>
+                    <p class="mb-1">Check-in Date:</p>
                     <input type="date" id="check_in" class="form-control mb-3">
-                    <label for="check_out">Check-out Date:</label>
+                    <p class="mb-1">Check-out Date:</p>
                     <input type="date" id="check_out" class="form-control mb-3">
                     <div id="message" class="text-danger"></div>
                 </div>
@@ -69,7 +68,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="booknow.js"></script>
 </body>
