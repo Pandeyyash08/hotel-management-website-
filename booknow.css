@@ -1,6 +1,5 @@
-/* General styles */
 body {
-    background-image: url('booknow\ img.png'); /* Adjust the path to your local image */
+    background-image: url('booknow\ img.png'); 
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
