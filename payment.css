@@ -8,7 +8,7 @@
 }
 
 body{
-  background: #2196F3;
+  background: #040a4c;
   margin: 0 10px;
 }
 
@@ -74,18 +74,6 @@ body{
   font-size: 20px;
   color: #555555;
 }
-
-.btn{
-  margin-top: 40px;
-  background: #2196F3;
-  padding: 12px;
-  text-align: center;
-  color: #f8f8f8;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
 .payment-logo{
   position: absolute;
   top: -50px;
@@ -130,4 +118,95 @@ body{
   .btn{
     margin-top: 20px;
   }
+}
+
+.payment-logos {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: #13056f; 
+  padding: 10px; 
+  border-radius: 5px; 
+  margin-top: 10px; 
+}
+.payment-logo-img {
+  width: 70px; 
+  height: auto; 
+  margin: 0 10px; 
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0d3c61; 
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.form {
+  background-color: #f8f9fa; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+.card.space {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 1rem;
+  color: #555555; 
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+.form-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #fff; 
+  color: #495057; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease;
+}
+
+.form-select:hover,
+.form-select:focus {
+  border-color: #0d3c61; 
+  outline: none;
+  box-shadow: 0 0 5px rgba(13, 60, 97, 0.5); 
+}
+.input,
+#paymentMethod {
+  transition: all 0.3s ease;
+}
+
+.input:hover,
+.input:focus,
+#paymentMethod:hover,
+#paymentMethod:focus {
+  border-color: #0d3c61;
+  outline: none;
+  box-shadow: 0 0 5px rgba(13, 60, 97, 0.5); 
+}
+.btn {
+  margin-top: 40px;
+  background: #063861; 
+  padding: 12px;
+  text-align: center;
+  color: #f8f8f8; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.btn:hover,
+.btn:focus {
+  background: #021523; 
+  box-shadow: 0 0 10px rgba(12, 10, 121, 0.5); 
+  outline: none;
 }
