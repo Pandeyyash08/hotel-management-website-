@@ -28,7 +28,8 @@
               <li><a href="#explore">Explore</a></li>
               <li><a href="#contacts">Contacts</a></li>
             </ul>
-            <button class="btn nav__btn">Book Now</button>
+            <button class="btn nav__btn" onclick="window.location.href='booknow.html'">Book Now</button>
+            
         </nav>
         <div class="section__container header__container" id="home">
           <p>SIMPLE -  COMFY - AFFORDABLE</p>
@@ -77,7 +78,7 @@
                 with confidence and excitement 
             </p>
             <div class="about__btn">
-                <button class="btn">Read More</button>
+                <button class="btn" onclick="window.location.href='booknow.html'">Book Now</button>
             </div>
         </div>
     </section>
@@ -101,7 +102,7 @@
                         Bask in luxury with breathtaking ocean views from your suit.
                     </p>
                     <h5>starting from <span>₹3499/night</span></h5>
-                    <button class="btn">BOOK NOW</button>
+                    <button class="btn" onclick="window.location.href='booknow.html'">Book Now</button>
                 </div>
             </div>
             <div class="room__card">
@@ -119,7 +120,7 @@
                         Experience the urban elegance and modern comfort in the heart of the city.
                     </p>
                     <h5>starting from <span>₹3199/night</span></h5>
-                    <button class="btn">BOOK NOW</button>
+                    <button class="btn" onclick="window.location.href='booknow.html'">Book Now</button>
                 </div>
             </div>
             <div class="room__card">
@@ -206,6 +207,20 @@
             <p id="conversion-result"></p>
         </div>
     </section>
+    
+<button id="chatBtn">Chat with Gemini</button>
+<div id="chatPopup">
+    <div id="chatHeader">
+        <span>Gemini AI Chat</span>
+        <button id="closeChat">&times;</button>
+    </div>
+    <div id="chatBody">
+        <p>How can I assist you?</p>
+    </div>
+    <input type="text" id="chatInput" placeholder="Type your message...">
+    <button id="sendBtn">Send</button>
+</div>
+
 
     <section class="explore" id="explore">
         <p class="section__subheader">EXPLORE</p>
@@ -230,7 +245,7 @@
                 our curated selection of hotels, making every moment of your getaway
                 truly extraordinary.  
             </p>
-            <button class="btn">BOOK NOW</button>
+            <button class="btn nav__btn" onclick="window.location.href='booknow.html'">Book Now</button>
         </div>
         <div class="footer__col">
             <h4>QUICK LINKS</h4>
