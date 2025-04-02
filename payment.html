@@ -9,33 +9,81 @@
     
     <h2>Payment Gateway</h2>
     <div class="form">
-      <div class="card space icon-relative">
-        <label class="label">Card holder:</label>
-        <input type="text" class="input" placeholder="Holder Name">
-        <i class="fas fa-user"></i>
+      <div class="card space">
+        <label class="label">Select Payment Method:</label>
+        <select id="paymentMethod" class="form-select" onchange="togglePaymentFields()">
+          <option value="creditCard">Credit Card</option>
+          <option value="debitCard">Debit Card</option>
+          <option value="debitCard">American Express</option>
+          <option value="upi">UPI</option>
+        </select>
       </div>
-      <div class="card space icon-relative">
-        <label class="label">Card number:</label>
-        <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
-        <i class="far fa-credit-card"></i>
-      </div>
-      <div class="card-grp space">
-        <div class="card-item icon-relative">
-          <label class="label">Expiry date:</label>
-          <input type="text" name="expiry-data" class="input"  placeholder="00 / 00">
-          <i class="far fa-calendar-alt"></i>
+
+      <div id="cardFields">
+        <div class="card space icon-relative">
+          <label class="label">Card holder:</label>
+          <input type="text" class="input" placeholder="Holder Name">
+          <i class="fas fa-user"></i>
         </div>
-        <div class="card-item icon-relative">
-          <label class="label">CVC:</label>
-          <input type="text" class="input" data-mask="000" placeholder="000">
-          <i class="fas fa-lock"></i>
+        <div class="card space icon-relative">
+          <label class="label">Card number:</label>
+          <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
+          <i class="far fa-credit-card"></i>
+        </div>
+        <div class="card-grp space">
+          <div class="card-item icon-relative">
+            <label class="label">Expiry date:</label>
+            <input type="text" name="expiry-data" class="input" placeholder="MM / YY">
+            <i class="far fa-calendar-alt"></i>
+          </div>
+          <div class="card-item icon-relative">
+            <label class="label">CVC:</label>
+            <input type="text" class="input" data-mask="000" placeholder="000">
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+        <div class="payment-logos">
+          <img src="credit2.png" alt="Credit Card" class="payment-logo-img">
+          <img src="preview.png" alt="Debit Card" class="payment-logo-img">
+          <img src="amexp.png" alt="Debit Card" class="payment-logo-img">
         </div>
       </div>
-        
+
+      </div>
+      <div id="upiFields" style="display: none;">
+        <div class="card space icon-relative">
+          <label class="label">UPI ID:</label>
+          <input type="text" class="input" placeholder="example@upi">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <div class="payment-logos">
+          <img src="credit2.png" alt="Credit Card" class="payment-logo-img">
+          <img src="preview.png" alt="Debit Card" class="payment-logo-img">
+          <img src="amexp.png" alt="Debit Card" class="payment-logo-img">
+        </div>
+      </div>
+      
+
       <div class="btn">
         Pay
-      </div> 
-      <script src="payment.js"></script>
+      </div>
     </div>
   </div>
 </div>
+
+<script>
+  function togglePaymentFields() {
+    const paymentMethod = document.getElementById("paymentMethod").value;
+    const cardFields = document.getElementById("cardFields");
+    const upiFields = document.getElementById("upiFields");
+
+    if (paymentMethod === "creditCard" || paymentMethod === "debitCard") {
+      cardFields.style.display = "block";
+      upiFields.style.display = "none";
+    } else if (paymentMethod === "upi") {
+      cardFields.style.display = "none";
+      upiFields.style.display = "block";
+    }
+  }
+</script>
+      
