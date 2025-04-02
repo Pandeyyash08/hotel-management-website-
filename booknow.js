@@ -38,3 +38,14 @@ async function bookNow() {
         document.getElementById("message").innerText = "An error occurred. Please try again.";
     }
 }
+function bookNow() {
+    
+    const checkIn = document.getElementById("check_in").value;
+    const checkOut = document.getElementById("check_out").value;
+
+    if (!checkIn || !checkOut) {
+        document.getElementById("message").textContent = "Please select both check-in and check-out dates.";
+        return;
+    }
+    window.location.href = "payment.html";
+}
