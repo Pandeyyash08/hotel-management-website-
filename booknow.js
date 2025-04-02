@@ -20,6 +20,7 @@ async function bookNow() {
         check_in_date: checkIn,
         check_out_date: checkOut
     };
+    
 
     try {
         const response = await fetch('https://your-server-api-url/book', {
@@ -39,7 +40,7 @@ async function bookNow() {
     }
 }
 function bookNow() {
-    
+
     const checkIn = document.getElementById("check_in").value;
     const checkOut = document.getElementById("check_out").value;
 
@@ -47,5 +48,6 @@ function bookNow() {
         document.getElementById("message").textContent = "Please select both check-in and check-out dates.";
         return;
     }
+
     window.location.href = "payment.html";
 }
